@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/WebService-CityGrid-Content-Places.t
+lib/WebService/CityGrid/Content/Places.pm

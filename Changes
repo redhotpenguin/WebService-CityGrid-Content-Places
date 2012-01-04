@@ -1,0 +1,6 @@
+Revision history for Perl extension WebService-CityGrid-Content-Places.
+
+0.01  Wed Dec 28 20:21:02 2011
+	- original version; created by h2xs 1.23 with options
+		-X WebService-CityGrid-Content-Places
+
