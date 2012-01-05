@@ -72,7 +72,7 @@ sub query {
             }
         }
 
-        $new_args{id} = $place->getAttribute('location_id');
+        $new_args{id} = $place->getAttribute('id');
         $DB::single = 1;
         my $result =
           WebService::CityGrid::Content::Places::Place->new( \%new_args );
