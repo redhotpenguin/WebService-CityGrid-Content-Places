@@ -62,7 +62,8 @@ sub query {
 
         my %new_args;
         foreach
-          my $attr (qw( name image tagline impression_id profile website ))
+          my $attr (qw( name image tagline impression_id profile website
+			user_review_count ))
         {
 
             my $val = $place->getElementsByTagName($attr);
@@ -93,10 +94,12 @@ use Any::Moose;
 
 has 'id'            => ( is => 'ro', isa => 'Int',  required => 1 );
 has 'impression_id' => ( is => 'ro', isa => 'Str',  required => 1 );
+has 'name'          => ( is => 'ro', isa => 'Str',  required => 1 );
 has 'image'         => ( is => 'ro', isa => 'Str',  required => 1 );
 has 'tagline'       => ( is => 'ro', isa => 'Str',  required => 0 );
 has 'profile'       => ( is => 'ro', isa => 'Str',  required => 1 );
 has 'website'       => ( is => 'ro', isa => 'Str',  required => 1 );
+has 'user_review_count' => ( is => 'ro', isa => 'Int', required => 0 );
 has 'top_hit'       => ( is => 'rw', isa => 'Bool', required => 0 );
 
 =cut
