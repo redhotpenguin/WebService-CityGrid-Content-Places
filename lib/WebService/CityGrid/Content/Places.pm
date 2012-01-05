@@ -83,8 +83,16 @@ sub query {
 
     return unless @results;
 
-    return \@results;
+
+    return [ 
+	     sort { return -1 if $b->image eq ''; return 1; } 
+sort { $a->tagline cmp $b->tagline  }
+sort { $a->user_review_count <=> $b->user_review_count }
+		
+ @results ];
+
 }
+
 
 __PACKAGE__->meta->make_immutable;
 
@@ -96,7 +104,7 @@ has 'id'            => ( is => 'ro', isa => 'Int',  required => 1 );
 has 'impression_id' => ( is => 'ro', isa => 'Str',  required => 1 );
 has 'name'          => ( is => 'ro', isa => 'Str',  required => 1 );
 has 'image'         => ( is => 'ro', isa => 'Str',  required => 1 );
-has 'tagline'       => ( is => 'ro', isa => 'Str',  required => 0 );
+has 'tagline'       => ( is => 'rw', isa => 'Str',  required => 0 );
 has 'profile'       => ( is => 'ro', isa => 'Str',  required => 1 );
 has 'website'       => ( is => 'ro', isa => 'Str',  required => 1 );
 has 'user_review_count' => ( is => 'ro', isa => 'Int', required => 0 );
