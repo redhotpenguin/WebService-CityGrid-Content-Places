@@ -91,12 +91,13 @@ package WebService::CityGrid::Content::Places::Place;
 
 use Any::Moose;
 
-has 'id'            => ( is => 'ro', isa => 'Int', required => 1 );
-has 'impression_id' => ( is => 'ro', isa => 'Str', required => 1 );
-has 'image'         => ( is => 'ro', isa => 'Str', required => 1 );
-has 'tagline'       => ( is => 'ro', isa => 'Str', required => 0 );
-has 'profile'       => ( is => 'ro', isa => 'Str', required => 1 );
-has 'website'       => ( is => 'ro', isa => 'Str', required => 1 );
+has 'id'            => ( is => 'ro', isa => 'Int',  required => 1 );
+has 'impression_id' => ( is => 'ro', isa => 'Str',  required => 1 );
+has 'image'         => ( is => 'ro', isa => 'Str',  required => 1 );
+has 'tagline'       => ( is => 'ro', isa => 'Str',  required => 0 );
+has 'profile'       => ( is => 'ro', isa => 'Str',  required => 1 );
+has 'website'       => ( is => 'ro', isa => 'Str',  required => 1 );
+has 'top_hit'       => ( is => 'rw', isa => 'Bool', required => 0 );
 
 =cut
 
